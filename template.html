@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Album</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* --- General --- */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    html, body {
+      margin: 0;
+      font-family: Roboto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .column-2 {
+      width: 48%;
+    }
+    .column-3 {
+      width: 32%;
+    }
+    @media screen and (max-width: 640px) {
+      .column-2, .column-3 {
+        width: 100%;
+      }
+    }
+
+    /* --- Nav --- */
+    nav {
+      background: #444;
+      color: #eee;
+    }
+    nav ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      list-style-type: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      display: inline-block;
+      color: #eee;
+      padding: .75em 1em;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Header --- */
+    header {
+      background: #ddd;
+      padding: 1.5em 0;
+      text-align: center;
+    }
+
+    /* --- Main --- */
+    main {
+      margin-top: 2em;
+      flex: 1 0 auto;
+    }
+    .card {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      margin-bottom: 1em;
+      border-bottom-left-radius: .25em;
+      border-bottom-right-radius: .25em;
+    }
+    .card img {
+      max-width: 100%;
+      border-top-left-radius: .25em;
+      border-top-right-radius: .25em;
+    }
+    .card-body {
+      padding: .5em 1em;
+    }
+    .card-body h3 {
+      margin: 0 0 .5em 0;
+    }
+    .card-body .likes {
+      text-align: right;
+    }
+    .card-body .likes .fa-heart {
+      color: #c34;
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: auto!important;
+      background: #eee;
+      color: #555;
+      padding: .75em 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #555;
+      display: inline-block;
+      padding: .25em .5em;
+    }
+
+    footer .social-icons {
+      text-align: right;
+    }
+
+    @media screen and (max-width: 640px) {
+      footer .column-2 {
+        text-align: center;
+      }
+      footer .column-2:first-of-type {
+        margin-bottom: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Title</h1>
+      <h2>Subtitle</h2>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div class="container">
+      <div class="grid">
+
+        <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div>
+
+        <!-- <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column-3">
+          <article class="card">
+            <img src="https://via.placeholder.com/480x320?text=image" alt="Alt text" />
+            <div class="card-body">
+              <h3>Title</h3>
+              <p>This is a description.</p>
+              <p class="likes">0 <i class="far fa-heart"></i></p>
+            </div>
+          </article>
+        </div> -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container grid">
+      <div class="column-2">
+        &copy; 2021 World Company
+      </div>
+      <div class="column-2 social-icons">
+        <a href="https://facebook.com/">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

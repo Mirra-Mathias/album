@@ -1,0 +1,11 @@
+<!-- Card -->
+<article class="card">
+	<img [src]="card.picture ? card.picture : '/assets/imgs/placeholder.png'" [alt]="card.title ? card.title : 'Title'" />
+	<div class="card-body">
+		<h3>{{ card.title ? card.title : 'Title' }}</h3>
+		<p>{{ card.description ? card.description : 'Description' }}</p>
+		<p class="likes">{{ likes }} <i (click)="like()" class="{{ this.stateLike ? 'fa' : 'far' }} fa-heart"></i></p>
+		<a [routerLink]="['/details', card.id]">En savoir plus</a>
+    <button *ngIf="boolToken" type="button" class="btn btn-primary" (click)="delete(card.id)" >x</button>
+  </div>
+</article>

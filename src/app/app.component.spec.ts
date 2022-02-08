@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ALBUM'`, () => {
+  it(`should have as title 'angular-simple-album'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ALBUM');
+    expect(app.title).toEqual('angular-simple-album');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ALBUM app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-simple-album app is running!');
   });
 });

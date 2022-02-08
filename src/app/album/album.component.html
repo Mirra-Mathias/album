@@ -1,0 +1,11 @@
+<!-- Album -->
+<main>
+	<div class="container">
+    <button *ngIf="boolToken" type="button" class="btn btn-primary" [routerLink]="['create']">+</button>
+    <br><br>
+		<div class="parent">
+			<div class="column-3" *ngFor="let card of cards">
+				<app-card [card]="card"></app-card></div>
+		</div>
+  </div>
+</main>

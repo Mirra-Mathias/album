@@ -1,0 +1,22 @@
+/* --- Nav --- */
+nav {
+	background: #444;
+	color: #eee;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+nav ul li {
+	list-style-type: none;
+}
+nav ul li a {
+	text-decoration: none;
+	display: inline-block;
+	color: #eee;
+	padding: .75em 1em;
+}
+nav ul li a:hover {
+	text-decoration: underline;
+}

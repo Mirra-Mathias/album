@@ -1,0 +1,25 @@
+/* --- Card --- */
+.card {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	margin-bottom: 1em;
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+}
+.card img {
+	max-width: 100%;
+	border-top-left-radius: .25em;
+	border-top-right-radius: .25em;
+}
+.card-body {
+	padding: .5em 1em;
+}
+.card-body h3 {
+	margin: 0 0 .5em 0;
+}
+.card-body .likes {
+	text-align: right;
+}
+.card-body .likes .fa-heart {
+	color: #c34;
+	cursor: pointer;
+}

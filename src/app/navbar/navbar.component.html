@@ -1,0 +1,23 @@
+<!-- Navigation -->
+<nav>
+	<div class="container">
+		<ul>
+
+      <ng-container *ngIf="currentUser else Lagout">
+        <li *ngFor="let page of pages">
+
+          <a *ngIf="page.text !== 'lagout'" [routerLink]="page.href">{{ page.text }}</a>
+          <a *ngIf="page.text == 'lagout'" (click)="logout()">{{ page.text }}</a>
+        </li>
+      </ng-container>
+
+      <ng-template #Lagout>
+        <li *ngFor="let page of pages2">
+          <a [routerLink]="page.href">{{ page.text }}</a>
+        </li>
+      </ng-template>
+
+
+		</ul>
+	</div>
+</nav>
